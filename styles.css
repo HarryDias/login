@@ -1,0 +1,565 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the container */
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Placeholder for the logo */
+.logo-placeholder {
+    background-color: #ddd;
+    height: 60px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    line-height: 60px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* Input fields styling */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus effect for input fields */
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Login button styling */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover effect for the login button */
+.login-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Active effect for the login button */
+.login-button:active {
+    background-color: #003f7f;
+    transform: translateY(1px);
+}
+
+/* Forgot password link */
+.forgot-password {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the forgot password link */
+.forgot-password:hover {
+    color: #0056b3;
+}
+
+/* Animated background gradient */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    font-family: Arial, sans-serif;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff4d4d;
+    margin-top: 15px;
+    display: none;
+}
+
+/* Focus effect with smooth animation for input fields */
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Pulsing hover effect for the login button */
+.login-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Container for input fields and icons */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Icon styling */
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Adjusting input field styling to accommodate icons */
+.input-field {
+    width: calc(100% - 40px);
+    padding: 12px 10px 12px 40px;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus effect for input fields with animated icon color change */
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Icon color change on input focus */
+.input-container input:focus + .icon {
+    color: #007bff;
+}
+
+/* Slide-in animation for the form */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the form */
+#loginForm {
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* Background overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Glowing effect for the login button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+/* Adding glow effect on hover */
+.login-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 15px rgba(0, 91, 255, 0.7);
+}
+
+/* Button loading animation */
+.login-button.loading {
+    pointer-events: none;
+    background-color: #003f7f;
+    animation: pulse 1.5s infinite;
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 91, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 91, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 91, 255, 0.7);
+    }
+}
+
+/* Animated background pattern */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background pattern animation */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: -2;
+    animation: patternAnimation 10s linear infinite;
+    opacity: 0.3;
+}
+
+/* Animation keyframes for pattern movement */
+@keyframes patternAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 60px 60px;
+    }
+}
+
+/* Shake animation for error feedback */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}
+
+/* Apply shake animation */
+.container.shake {
+    animation: shake 0.5s;
+}
+
+/* Success animation for the login button */
+.login-button.success {
+    background-color: #28a745;
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.7);
+}
+
+/* Keyframes for success pulse effect */
+@keyframes successPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(40, 167, 69, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+    }
+}
+
+/* Tooltip styling */
+.tooltip {
+    display: none;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip on error */
+.input-container.shake .tooltip {
+    display: block;
+    opacity: 1;
+}
+
+/* Biometric login options styling */
+.biometric-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.biometric-icon {
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for biometric icons */
+.biometric-icon:hover {
+    color: #007bff;
+}
+
+/* Active state for biometric icons */
+.biometric-icon:active {
+    transform: scale(0.9);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: linear-gradient(120deg, #2b2b2b, #1b1b1b);
+}
+
+body.dark-mode .input-field {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode .login-button {
+    background-color: #444;
+}
+
+body.dark-mode .biometric-icon {
+    color: #bbb;
+}
+
+/* Input auto-completion animation */
+.input-field:focus::placeholder {
+    color: transparent;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Animated progress indicator inside input */
+.input-field::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #007bff;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.input-field:focus::after {
+    width: 100%;
+}
+
+/* Circular progress indicator styling */
+.progress-indicator {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    border-radius: 50%;
+}
+
+.mask,
+.fill {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+.mask {
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+.fill {
+    background: #007bff;
+    clip: rect(0px, 50px, 100px, 0px);
+}
+
+.inside-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    line-height: 80px;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+/* Positioning the particles container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+/* High contrast mode styles */
+body.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+body.high-contrast .input-field {
+    background-color: #000;
+    border-color: #fff;
+    color: #fff;
+}
+
+body.high-contrast .login-button {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/* Styling for the personalized greeting */
+.greeting-message {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for login streak */
+.streak-message {
+    font-size: 18px;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Button animation effects */
+.login-button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.login-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.login-button:hover::before {
+    left: 100%;
+}
+
+.login-button:active {
+    transform: scale(0.95);
+}
+
+/* Frosted glass effect for the login form */
+.login-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* CAPTCHA container styling */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.captcha-image {
+    margin-left: 10px;
+    height: 50px;
+}
+
+.captcha-refresh {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}

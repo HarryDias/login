@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Wireframe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div id="greeting" class="greeting-message"></div>
+        <div id="login-streak" class="streak-message">Streak: 0 days</div>
+        <form id="loginForm">
+            <div class="logo-placeholder">Logo</div>
+            <div class="input-container">
+                <span class="icon">&#128100;</span>
+                <input type="text" id="username" placeholder="Username" class="input-field" aria-label="Username" aria-required="true">
+                <span class="tooltip" id="usernameTooltip">Username is required</span>
+            </div>
+            <div class="input-container">
+                <span class="icon">&#128274;</span>
+                <input type="password" id="password" placeholder="Password" class="input-field" aria-label="Password" aria-required="true">
+                <span class="tooltip" id="passwordTooltip">Password is required</span>
+            </div>
+            <div class="biometric-options">
+                <span class="biometric-icon" id="fingerprint">&#128376;</span>
+                <span class="biometric-icon" id="face-recognition">&#128100;</span>
+            </div>
+            <div class="dark-mode-toggle">
+                <label for="darkModeCheckbox">Dark Mode</label>
+                <input type="checkbox" id="darkModeCheckbox">
+            </div>
+            <div class="theme-selector-container">
+                <label for="backgroundTheme">Select Background Theme:</label>
+                <select id="backgroundTheme" class="theme-selector">
+                    <option value="default">Default</option>
+                    <option value="nature">Nature</option>
+                    <option value="space">Space</option>
+                    <option value="abstract">Abstract</option>
+                </select>
+            </div>
+            <div class="progress-indicator">
+                <div class="circle">
+                    <div class="mask full">
+                        <div class="fill"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill"></div>
+                    </div>
+                    <div class="inside-circle">0%</div>
+                </div>
+            </div>
+            <div class="captcha-container">
+                <input type="text" id="captchaInput" class="input-field" placeholder="Enter CAPTCHA">
+                <img src="captcha.jpg" alt="CAPTCHA" class="captcha-image">
+                <button class="captcha-refresh" aria-label="Refresh CAPTCHA">&#x21bb;</button>
+            </div>
+            <button type="submit" class="login-button" aria-label="Login">Login</button>
+            <button id="voiceLogin" aria-label="Voice login">&#127908;</button>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <p id="errorMessage" class="error-message"></p>
+        </form>
+        <div id="mfa-section" class="mfa-container" style="display: none;">
+            <input type="text" id="mfa-code" placeholder="Enter verification code" class="input-field" aria-label="Verification Code" aria-required="true">
+            <button id="verify-button" class="login-button" aria-label="Verify">Verify</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
